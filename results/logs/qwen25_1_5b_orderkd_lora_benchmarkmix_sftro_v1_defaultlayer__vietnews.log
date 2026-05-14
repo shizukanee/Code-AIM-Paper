@@ -1,0 +1,98 @@
+COMMAND:
+/workspace/Vietnamese benchmark/.venv/bin/python3 -m melt --model_name Qwen/Qwen2.5-1.5B-Instruct --dataset_name vietnews --lang vi --dataset_dir /workspace/Vietnamese benchmark/datasets --config_dir /workspace/Vietnamese benchmark/configs --output_dir /workspace/Vietnamese benchmark/results/generation/qwen25_1_5b_orderkd_lora_benchmarkmix_sftro_v1_defaultlayer/vietnews --output_eval_dir /workspace/Vietnamese benchmark/results/evaluation/qwen25_1_5b_orderkd_lora_benchmarkmix_sftro_v1_defaultlayer/vietnews --wtype hf --ptemplate plain --device cuda:0 --per_device_eval_batch_size 1 --num_fs 3 --prompt_type normal --category zero-shot --base_model_name Qwen/Qwen2.5-1.5B-Instruct --adapter_path ../order_kd/outputs/checkpoints/benchmark_mix_orderkd_lora_sftro_v1_defaultlayer --max_test_examples 100
+
+OUTPUT:
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Loading train dataset vietnews...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Loading test dataset vietnews...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:  40%|████      | 136/338 [00:00<00:00, 1328.48it/s]
+Loading weights:  93%|█████████▎| 314/338 [00:00<00:00, 1572.31it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1577.83it/s]
+
+  0%|          | 0/100 [00:00<?, ?it/s]Saving results of 1 batches
+
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 18603.54it/s]
+[transformers] [1mBertModel LOAD REPORT[0m from: bert-base-multilingual-cased
+Key                                        | Status     |  | 
+-------------------------------------------+------------+--+-
+cls.predictions.bias                       | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |  | 
+cls.predictions.transform.dense.bias       | UNEXPECTED |  | 
+cls.seq_relationship.weight                | UNEXPECTED |  | 
+cls.predictions.transform.dense.weight     | UNEXPECTED |  | 
+cls.seq_relationship.bias                  | UNEXPECTED |  | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |  | 
+
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3481.45it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=True): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3598.31it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=False): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 5523.41it/s]
+BERT score
+data_stats
+SummaC
+
+
+Loading weights:   0%|          | 0/27 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 27/27 [00:00<00:00, 16749.92it/s]
+
+  0%|          | 0/100 [00:12<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/__main__.py", line 17, in <module>
+    main()
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/cli.py", line 27, in main
+    generation(args)
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/generation.py", line 176, in generation
+    eval_pipeline.run(
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/pipelines/pipelines.py", line 2074, in run
+    results = self(ds_wrapper, ds_loader, saving_fn, start_idx)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/pipelines/pipelines.py", line 167, in __call__
+    return self.__summarization(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/pipelines/pipelines.py", line 578, in __summarization
+    mean_result = self.metric_pipeline.run_mean(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/pipelines/metric_pipelines.py", line 97, in run_mean
+    _, metric_result = metric.evaluate(data, args, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/metrics/summary.py", line 85, in evaluate
+    self.summac.score(
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/metrics/summac/model_summac.py", line 529, in score
+    score = self.score_one(source, gen)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/metrics/summac/model_summac.py", line 500, in score_one
+    image = self.imager.build_image(original, generated)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/melt-upstream/src/melt/tools/metrics/summac/model_summac.py", line 182, in build_image
+    batch_tokens = self.tokenizer.batch_encode_plus(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Vietnamese benchmark/.venv/lib/python3.11/site-packages/transformers/tokenization_utils_base.py", line 1315, in __getattr__
+    raise AttributeError(f"{self.__class__.__name__} has no attribute {key}")
+AttributeError: AlbertTokenizer has no attribute batch_encode_plus. Did you mean: '_encode_plus'?

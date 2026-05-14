@@ -1,0 +1,442 @@
+COMMAND:
+/workspace/Vietnamese benchmark/.venv/bin/python3 -m melt --model_name Qwen/Qwen2.5-1.5B-Instruct --dataset_name xquad --lang vi --dataset_dir /workspace/Vietnamese benchmark/datasets --config_dir /workspace/Vietnamese benchmark/configs --output_dir /workspace/Vietnamese benchmark/results/generation/qwen25_1_5b_lora_benchmarkmix_sftro_v1/xquad --output_eval_dir /workspace/Vietnamese benchmark/results/evaluation/qwen25_1_5b_lora_benchmarkmix_sftro_v1/xquad --wtype hf --ptemplate plain --device cuda:0 --per_device_eval_batch_size 1 --num_fs 3 --prompt_type normal --category zero-shot --base_model_name Qwen/Qwen2.5-1.5B-Instruct --adapter_path ../order_kd/outputs/checkpoints/benchmark_mix_lora_sftro_v1 --max_test_examples 100
+
+OUTPUT:
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Loading train dataset xquad...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Loading test dataset xquad...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:  36%|███▋      | 123/338 [00:00<00:00, 1176.78it/s]
+Loading weights:  88%|████████▊ | 298/338 [00:00<00:00, 1505.99it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1498.83it/s]
+
+  0%|          | 0/100 [00:00<?, ?it/s][transformers] The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Saving results of 1 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3443.72it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=True): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3434.44it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=False): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 6741.58it/s]
+Results of 1 batches:  {'f1_score': 0.041666666666666664, 'exact_match': 0.0, 'toxicity': 0.0009335184004157782}
+
+  1%|          | 1/100 [00:05<08:53,  5.39s/it]Saving results of 2 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 2 batches:  {'f1_score': 0.35416666666666663, 'exact_match': 0.0, 'toxicity': 0.0012789960019290447}
+
+  2%|▏         | 2/100 [00:07<05:39,  3.46s/it]Saving results of 3 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 3 batches:  {'f1_score': 0.4583333333333333, 'exact_match': 0.0, 'toxicity': 0.0014045843854546547}
+
+  3%|▎         | 3/100 [00:09<04:35,  2.84s/it]Saving results of 4 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 4 batches:  {'f1_score': 0.34375, 'exact_match': 0.0, 'toxicity': 0.0012352408666629344}
+
+  4%|▍         | 4/100 [00:11<04:03,  2.54s/it]Saving results of 5 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 5 batches:  {'f1_score': 0.28833333333333333, 'exact_match': 0.0, 'toxicity': 0.0013133249944075943}
+
+  5%|▌         | 5/100 [00:13<03:46,  2.38s/it]Saving results of 6 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 6 batches:  {'f1_score': 0.3513888888888889, 'exact_match': 0.0, 'toxicity': 0.001474823181827863}
+
+  6%|▌         | 6/100 [00:15<03:34,  2.28s/it]Saving results of 7 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 7 batches:  {'f1_score': 0.31309523809523815, 'exact_match': 0.0, 'toxicity': 0.0015582256684345858}
+
+  7%|▋         | 7/100 [00:17<03:26,  2.22s/it]Saving results of 8 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 8 batches:  {'f1_score': 0.2739583333333333, 'exact_match': 0.0, 'toxicity': 0.0017365827225148678}
+
+  8%|▊         | 8/100 [00:20<03:20,  2.18s/it]Saving results of 9 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 9 batches:  {'f1_score': 0.2435185185185185, 'exact_match': 0.0, 'toxicity': 0.0016458751763113672}
+
+  9%|▉         | 9/100 [00:22<03:15,  2.15s/it]Saving results of 10 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 10 batches:  {'f1_score': 0.22301282051282048, 'exact_match': 0.0, 'toxicity': 0.0015512022830080241}
+
+ 10%|█         | 10/100 [00:24<03:12,  2.14s/it]Saving results of 11 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+[transformers] You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Results of 11 batches:  {'f1_score': 0.2633449883449883, 'exact_match': 0.0, 'toxicity': 0.0016176676250655544}
+
+ 11%|█         | 11/100 [00:26<03:09,  2.12s/it]Saving results of 12 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 12 batches:  {'f1_score': 0.2413995726495726, 'exact_match': 0.0, 'toxicity': 0.0015531637958095719}
+
+ 12%|█▏        | 12/100 [00:28<03:06,  2.12s/it]Saving results of 13 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 13 batches:  {'f1_score': 0.23015638207945896, 'exact_match': 0.0, 'toxicity': 0.0030767101785526252}
+
+ 13%|█▎        | 13/100 [00:30<03:03,  2.11s/it]Saving results of 14 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 14 batches:  {'f1_score': 0.21371664050235475, 'exact_match': 0.0, 'toxicity': 0.004187064636166075}
+
+ 14%|█▍        | 14/100 [00:32<03:01,  2.11s/it]Saving results of 15 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 15 batches:  {'f1_score': 0.2052659659181398, 'exact_match': 0.0, 'toxicity': 0.003961426054593176}
+
+ 15%|█▌        | 15/100 [00:34<02:59,  2.11s/it]Saving results of 16 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 16 batches:  {'f1_score': 0.19498786345641933, 'exact_match': 0.0, 'toxicity': 0.003812626066064695}
+
+ 16%|█▌        | 16/100 [00:36<02:56,  2.10s/it]Saving results of 17 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 17 batches:  {'f1_score': 0.1899351014349187, 'exact_match': 0.0, 'toxicity': 0.0036292412448400524}
+
+ 17%|█▋        | 17/100 [00:38<02:54,  2.10s/it]Saving results of 18 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 18 batches:  {'f1_score': 0.18151990349195313, 'exact_match': 0.0, 'toxicity': 0.003467877747930793}
+
+ 18%|█▊        | 18/100 [00:41<02:52,  2.10s/it]Saving results of 19 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 19 batches:  {'f1_score': 0.17626267978507268, 'exact_match': 0.0, 'toxicity': 0.003334390615284639}
+
+ 19%|█▉        | 19/100 [00:43<02:50,  2.10s/it]Saving results of 20 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 20 batches:  {'f1_score': 0.16937262271889597, 'exact_match': 0.0, 'toxicity': 0.003503840442863293}
+
+ 20%|██        | 20/100 [00:45<02:48,  2.10s/it]Saving results of 21 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 21 batches:  {'f1_score': 0.1632508943289777, 'exact_match': 0.0, 'toxicity': 0.003374969159873823}
+
+ 21%|██        | 21/100 [00:47<02:46,  2.11s/it]Saving results of 22 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 22 batches:  {'f1_score': 0.16078907681815638, 'exact_match': 0.0, 'toxicity': 0.0032531564092178914}
+
+ 22%|██▏       | 22/100 [00:49<02:44,  2.11s/it]Saving results of 23 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 23 batches:  {'f1_score': 0.15560984159417857, 'exact_match': 0.0, 'toxicity': 0.003152220140454238}
+
+ 23%|██▎       | 23/100 [00:51<02:42,  2.11s/it]Saving results of 24 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 24 batches:  {'f1_score': 0.15049221841300042, 'exact_match': 0.0, 'toxicity': 0.0030526255238025137}
+
+ 24%|██▍       | 24/100 [00:53<02:40,  2.11s/it]Saving results of 25 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 25 batches:  {'f1_score': 0.14773783579892938, 'exact_match': 0.0, 'toxicity': 0.002958380056079477}
+
+ 25%|██▌       | 25/100 [00:55<02:38,  2.11s/it]Saving results of 26 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 26 batches:  {'f1_score': 0.16769663698615006, 'exact_match': 0.0, 'toxicity': 0.002997768360028903}
+
+ 26%|██▌       | 26/100 [00:57<02:36,  2.11s/it]Saving results of 27 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 27 batches:  {'f1_score': 0.16575915470461172, 'exact_match': 0.0, 'toxicity': 0.002913591415293653}
+
+ 27%|██▋       | 27/100 [01:00<02:34,  2.11s/it]Saving results of 28 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 28 batches:  {'f1_score': 0.16253460268349015, 'exact_match': 0.0, 'toxicity': 0.0028350922054544625}
+
+ 28%|██▊       | 28/100 [01:02<02:32,  2.11s/it]Saving results of 29 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 29 batches:  {'f1_score': 0.1613320155036486, 'exact_match': 0.0, 'toxicity': 0.0027602164010549412}
+
+ 29%|██▉       | 29/100 [01:04<02:30,  2.12s/it]Saving results of 30 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 30 batches:  {'f1_score': 0.15734317054241587, 'exact_match': 0.0, 'toxicity': 0.002699263261941572}
+
+ 30%|███       | 30/100 [01:06<02:28,  2.12s/it]Saving results of 31 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 31 batches:  {'f1_score': 0.15344060492374556, 'exact_match': 0.0, 'toxicity': 0.003439558061560796}
+
+ 31%|███       | 31/100 [01:08<02:26,  2.12s/it]Saving results of 32 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 32 batches:  {'f1_score': 0.15087772887702136, 'exact_match': 0.0, 'toxicity': 0.0040005410482990555}
+
+ 32%|███▏      | 32/100 [01:10<02:24,  2.12s/it]Saving results of 33 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 33 batches:  {'f1_score': 0.14742801094247637, 'exact_match': 0.0, 'toxicity': 0.0039062441369010644}
+
+ 33%|███▎      | 33/100 [01:12<02:22,  2.13s/it]Saving results of 34 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 34 batches:  {'f1_score': 0.15289581454220746, 'exact_match': 0.0, 'toxicity': 0.003900008337736568}
+
+ 34%|███▍      | 34/100 [01:14<02:20,  2.13s/it]Saving results of 35 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 35 batches:  {'f1_score': 0.1495477708614097, 'exact_match': 0.0, 'toxicity': 0.0042399273453546426}
+
+ 35%|███▌      | 35/100 [01:17<02:17,  2.12s/it]Saving results of 36 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 36 batches:  {'f1_score': 0.1463857296073229, 'exact_match': 0.0, 'toxicity': 0.004763583245221525}
+
+ 36%|███▌      | 36/100 [01:19<02:15,  2.12s/it]Saving results of 37 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 37 batches:  {'f1_score': 0.16945638556388176, 'exact_match': 0.02702702702702703, 'toxicity': 0.004677056935867546}
+
+ 37%|███▋      | 37/100 [01:21<02:13,  2.13s/it]Saving results of 38 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 38 batches:  {'f1_score': 0.1659716658658069, 'exact_match': 0.02631578947368421, 'toxicity': 0.004998466761255833}
+
+ 38%|███▊      | 38/100 [01:23<02:11,  2.13s/it]Saving results of 39 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 39 batches:  {'f1_score': 0.16354748395715982, 'exact_match': 0.02564102564102564, 'toxicity': 0.005418788332742854}
+
+ 39%|███▉      | 39/100 [01:25<02:09,  2.13s/it]Saving results of 40 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 40 batches:  {'f1_score': 0.15945879685823083, 'exact_match': 0.025, 'toxicity': 0.005308341183990706}
+
+ 40%|████      | 40/100 [01:27<02:07,  2.13s/it]Saving results of 41 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 41 batches:  {'f1_score': 0.15556955791046911, 'exact_match': 0.024390243902439025, 'toxicity': 0.01077467125482721}
+
+ 41%|████      | 41/100 [01:29<02:05,  2.13s/it]Saving results of 42 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 42 batches:  {'f1_score': 0.15356620108947153, 'exact_match': 0.023809523809523808, 'toxicity': 0.010852686362341046}
+
+ 42%|████▏     | 42/100 [01:31<02:03,  2.13s/it]Saving results of 43 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 43 batches:  {'f1_score': 0.1517500498574654, 'exact_match': 0.023255813953488372, 'toxicity': 0.010617619957016823}
+
+ 43%|████▎     | 43/100 [01:34<02:01,  2.13s/it]Saving results of 44 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 44 batches:  {'f1_score': 0.15073625002304247, 'exact_match': 0.022727272727272728, 'toxicity': 0.010891943675233051}
+
+ 44%|████▍     | 44/100 [01:36<01:59,  2.13s/it]Saving results of 45 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 45 batches:  {'f1_score': 0.14923840742993782, 'exact_match': 0.022222222222222223, 'toxicity': 0.011338581861410704}
+
+ 45%|████▌     | 45/100 [01:38<01:57,  2.13s/it]Saving results of 46 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 46 batches:  {'f1_score': 0.14678460805893126, 'exact_match': 0.021739130434782608, 'toxicity': 0.011649664908991721}
+
+ 46%|████▌     | 46/100 [01:40<01:55,  2.13s/it]Saving results of 47 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 47 batches:  {'f1_score': 0.14518128813062572, 'exact_match': 0.02127659574468085, 'toxicity': 0.01184758501612839}
+
+ 47%|████▋     | 47/100 [01:42<01:53,  2.14s/it]Saving results of 48 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 48 batches:  {'f1_score': 0.14283973807052733, 'exact_match': 0.020833333333333332, 'toxicity': 0.01191669251663067}
+
+ 48%|████▊     | 48/100 [01:44<01:51,  2.14s/it]Saving results of 49 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 49 batches:  {'f1_score': 0.1413567931833021, 'exact_match': 0.02040816326530612, 'toxicity': 0.01216843750147263}
+
+ 49%|████▉     | 49/100 [01:46<01:49,  2.14s/it]Saving results of 50 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 50 batches:  {'f1_score': 0.1415599603499391, 'exact_match': 0.02, 'toxicity': 0.012109985474962741}
+
+ 50%|█████     | 50/100 [01:49<01:47,  2.14s/it]Saving results of 51 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 51 batches:  {'f1_score': 0.13878427485288147, 'exact_match': 0.0196078431372549, 'toxicity': 0.01971436493947883}
+
+ 51%|█████     | 51/100 [01:51<01:45,  2.15s/it]Saving results of 52 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 52 batches:  {'f1_score': 0.14710435747933703, 'exact_match': 0.019230769230769232, 'toxicity': 0.020164248938761793}
+
+ 52%|█████▏    | 52/100 [01:53<01:43,  2.15s/it]Saving results of 53 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 53 batches:  {'f1_score': 0.1527145477994334, 'exact_match': 0.018867924528301886, 'toxicity': 0.022414855142826883}
+
+ 53%|█████▎    | 53/100 [01:55<01:40,  2.15s/it]Saving results of 54 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 54 batches:  {'f1_score': 0.16840501913648093, 'exact_match': 0.037037037037037035, 'toxicity': 0.022030355292372406}
+
+ 54%|█████▍    | 54/100 [01:57<01:38,  2.15s/it]Saving results of 55 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 55 batches:  {'f1_score': 0.1734239177784439, 'exact_match': 0.03636363636363636, 'toxicity': 0.023001831452446907}
+
+ 55%|█████▌    | 55/100 [01:59<01:36,  2.15s/it]Saving results of 56 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 56 batches:  {'f1_score': 0.17095362851986895, 'exact_match': 0.03571428571428571, 'toxicity': 0.022606415894447958}
+
+ 56%|█████▌    | 56/100 [02:01<01:34,  2.15s/it]Saving results of 57 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 57 batches:  {'f1_score': 0.1757517130097738, 'exact_match': 0.03508771929824561, 'toxicity': 0.023533698845360624}
+
+ 57%|█████▋    | 57/100 [02:04<01:32,  2.15s/it]Saving results of 58 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 58 batches:  {'f1_score': 0.1842157639348926, 'exact_match': 0.034482758620689655, 'toxicity': 0.023314347012964046}
+
+ 58%|█████▊    | 58/100 [02:06<01:30,  2.15s/it]Saving results of 59 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 59 batches:  {'f1_score': 0.18237264417520305, 'exact_match': 0.03389830508474576, 'toxicity': 0.022956945148091448}
+
+ 59%|█████▉    | 59/100 [02:08<01:28,  2.16s/it]Saving results of 60 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 60 batches:  {'f1_score': 0.17995038405623362, 'exact_match': 0.03333333333333333, 'toxicity': 0.02259279830905143}
+
+ 60%|██████    | 60/100 [02:10<01:26,  2.17s/it]Saving results of 61 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 61 batches:  {'f1_score': 0.1776561154651478, 'exact_match': 0.03278688524590164, 'toxicity': 0.022942247020928036}
+
+ 61%|██████    | 61/100 [02:12<01:24,  2.17s/it]Saving results of 62 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 62 batches:  {'f1_score': 0.17531098561113137, 'exact_match': 0.03225806451612903, 'toxicity': 0.02258389109310003}
+
+ 62%|██████▏   | 62/100 [02:14<01:22,  2.17s/it]Saving results of 63 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 63 batches:  {'f1_score': 0.1733862724118127, 'exact_match': 0.031746031746031744, 'toxicity': 0.022243818628513032}
+
+ 63%|██████▎   | 63/100 [02:17<01:20,  2.17s/it]Saving results of 64 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 64 batches:  {'f1_score': 0.17168517642150716, 'exact_match': 0.03125, 'toxicity': 0.021934929294729955}
+
+ 64%|██████▍   | 64/100 [02:19<01:18,  2.17s/it]Saving results of 65 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 65 batches:  {'f1_score': 0.16963558199135378, 'exact_match': 0.03076923076923077, 'toxicity': 0.0227328641519237}
+
+ 65%|██████▌   | 65/100 [02:21<01:15,  2.17s/it]Saving results of 66 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 66 batches:  {'f1_score': 0.16798361954612206, 'exact_match': 0.030303030303030304, 'toxicity': 0.022405939913975697}
+
+ 66%|██████▌   | 66/100 [02:23<01:13,  2.17s/it]Saving results of 67 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 67 batches:  {'f1_score': 0.1660982918912048, 'exact_match': 0.029850746268656716, 'toxicity': 0.022157713392082213}
+
+ 67%|██████▋   | 67/100 [02:25<01:11,  2.17s/it]Saving results of 68 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 68 batches:  {'f1_score': 0.16496285949411194, 'exact_match': 0.029411764705882353, 'toxicity': 0.02186267077238025}
+
+ 68%|██████▊   | 68/100 [02:27<01:09,  2.17s/it]Saving results of 69 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 69 batches:  {'f1_score': 0.1625720934144871, 'exact_match': 0.028985507246376812, 'toxicity': 0.021559382302929527}
+
+ 69%|██████▉   | 69/100 [02:30<01:07,  2.17s/it]Saving results of 70 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 70 batches:  {'f1_score': 0.16082106350856587, 'exact_match': 0.02857142857142857, 'toxicity': 0.02127130842002641}
+
+ 70%|███████   | 70/100 [02:32<01:05,  2.17s/it]Saving results of 71 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 71 batches:  {'f1_score': 0.15903341902372334, 'exact_match': 0.028169014084507043, 'toxicity': 0.023459962151065782}
+
+ 71%|███████   | 71/100 [02:34<01:02,  2.17s/it]Saving results of 72 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 72 batches:  {'f1_score': 0.15726553864486653, 'exact_match': 0.027777777777777776, 'toxicity': 0.02321322276677367}
+
+ 72%|███████▏  | 72/100 [02:36<01:00,  2.17s/it]Saving results of 73 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 73 batches:  {'f1_score': 0.15511121619767657, 'exact_match': 0.0273972602739726, 'toxicity': 0.022908407690845532}
+
+ 73%|███████▎  | 73/100 [02:38<00:58,  2.17s/it]Saving results of 74 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 74 batches:  {'f1_score': 0.15301511868149176, 'exact_match': 0.02702702702702703, 'toxicity': 0.02261016232345404}
+
+ 74%|███████▍  | 74/100 [02:41<00:56,  2.17s/it]Saving results of 75 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 75 batches:  {'f1_score': 0.1520005581247129, 'exact_match': 0.02666666666666667, 'toxicity': 0.022687671397191782}
+
+ 75%|███████▌  | 75/100 [02:43<00:54,  2.18s/it]Saving results of 76 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 76 batches:  {'f1_score': 0.15101269652995453, 'exact_match': 0.02631578947368421, 'toxicity': 0.02276314075846274}
+
+ 76%|███████▌  | 76/100 [02:45<00:52,  2.18s/it]Saving results of 77 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 77 batches:  {'f1_score': 0.15101179652601243, 'exact_match': 0.025974025974025976, 'toxicity': 0.023643736874188793}
+
+ 77%|███████▋  | 77/100 [02:47<00:50,  2.18s/it]Saving results of 78 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 78 batches:  {'f1_score': 0.14956884449954483, 'exact_match': 0.02564102564102564, 'toxicity': 0.0242833302801069}
+
+ 78%|███████▊  | 78/100 [02:49<00:48,  2.18s/it]Saving results of 79 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 79 batches:  {'f1_score': 0.14974221743148033, 'exact_match': 0.02531645569620253, 'toxicity': 0.024001000347382187}
+
+ 79%|███████▉  | 79/100 [02:51<00:45,  2.18s/it]Saving results of 80 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 80 batches:  {'f1_score': 0.14885083187044956, 'exact_match': 0.025, 'toxicity': 0.026324698065582196}
+
+ 80%|████████  | 80/100 [02:54<00:43,  2.18s/it]Saving results of 81 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 81 batches:  {'f1_score': 0.1475170725452664, 'exact_match': 0.024691358024691357, 'toxicity': 0.026009421983883244}
+
+ 81%|████████  | 81/100 [02:56<00:41,  2.18s/it]Saving results of 82 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 82 batches:  {'f1_score': 0.1461052305843001, 'exact_match': 0.024390243902439025, 'toxicity': 0.027286651071513117}
+
+ 82%|████████▏ | 82/100 [02:58<00:39,  2.19s/it]Saving results of 83 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 83 batches:  {'f1_score': 0.14530878202304348, 'exact_match': 0.024096385542168676, 'toxicity': 0.026984190412639945}
+
+ 83%|████████▎ | 83/100 [03:00<00:37,  2.19s/it]Saving results of 84 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 84 batches:  {'f1_score': 0.14612993597855145, 'exact_match': 0.023809523809523808, 'toxicity': 0.02667345925597363}
+
+ 84%|████████▍ | 84/100 [03:02<00:35,  2.19s/it]Saving results of 85 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 85 batches:  {'f1_score': 0.14575529807628276, 'exact_match': 0.023529411764705882, 'toxicity': 0.026368162196184344}
+
+ 85%|████████▌ | 85/100 [03:05<00:32,  2.19s/it]Saving results of 86 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 86 batches:  {'f1_score': 0.1446724641329233, 'exact_match': 0.023255813953488372, 'toxicity': 0.026078784111399897}
+
+ 86%|████████▌ | 86/100 [03:07<00:30,  2.20s/it]Saving results of 87 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 87 batches:  {'f1_score': 0.14342753507810393, 'exact_match': 0.022988505747126436, 'toxicity': 0.025790034710354674}
+
+ 87%|████████▋ | 87/100 [03:09<00:28,  2.20s/it]Saving results of 88 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 88 batches:  {'f1_score': 0.14316131308858004, 'exact_match': 0.022727272727272728, 'toxicity': 0.025507795590700964}
+
+ 88%|████████▊ | 88/100 [03:11<00:26,  2.20s/it]Saving results of 89 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 89 batches:  {'f1_score': 0.14204127879398437, 'exact_match': 0.02247191011235955, 'toxicity': 0.02624579557555131}
+
+ 89%|████████▉ | 89/100 [03:13<00:24,  2.20s/it]Saving results of 90 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 90 batches:  {'f1_score': 0.14093585560171076, 'exact_match': 0.022222222222222223, 'toxicity': 0.030476365784933377}
+
+ 90%|█████████ | 90/100 [03:16<00:22,  2.21s/it]Saving results of 91 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 91 batches:  {'f1_score': 0.14021646925568326, 'exact_match': 0.02197802197802198, 'toxicity': 0.030150673478191902}
+
+ 91%|█████████ | 91/100 [03:18<00:19,  2.21s/it]Saving results of 92 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 92 batches:  {'f1_score': 0.1386923771985563, 'exact_match': 0.021739130434782608, 'toxicity': 0.029830009567060344}
+
+ 92%|█████████▏| 92/100 [03:20<00:17,  2.22s/it]Saving results of 93 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 93 batches:  {'f1_score': 0.14795374948674384, 'exact_match': 0.03225806451612903, 'toxicity': 0.029519217946286244}
+
+ 93%|█████████▎| 93/100 [03:22<00:15,  2.22s/it]Saving results of 94 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 94 batches:  {'f1_score': 0.14749959425704165, 'exact_match': 0.031914893617021274, 'toxicity': 0.03556737144839296}
+
+ 94%|█████████▍| 94/100 [03:25<00:13,  2.22s/it]Saving results of 95 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 95 batches:  {'f1_score': 0.14759815373957846, 'exact_match': 0.031578947368421054, 'toxicity': 0.03525258653282531}
+
+ 95%|█████████▌| 95/100 [03:27<00:11,  2.22s/it]Saving results of 96 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 96 batches:  {'f1_score': 0.14644647544059364, 'exact_match': 0.03125, 'toxicity': 0.03745563411333327}
+
+ 96%|█████████▌| 96/100 [03:29<00:08,  2.23s/it]Saving results of 97 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 97 batches:  {'f1_score': 0.14738298740092998, 'exact_match': 0.030927835051546393, 'toxicity': 0.037077394479132}
+
+ 97%|█████████▋| 97/100 [03:31<00:06,  2.23s/it]Saving results of 98 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 98 batches:  {'f1_score': 0.1462501368801413, 'exact_match': 0.030612244897959183, 'toxicity': 0.036706215729319244}
+
+ 98%|█████████▊| 98/100 [03:33<00:04,  2.23s/it]Saving results of 99 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 99 batches:  {'f1_score': 0.14477286277024087, 'exact_match': 0.030303030303030304, 'toxicity': 0.036374860590163885}
+
+ 99%|█████████▉| 99/100 [03:36<00:02,  2.23s/it]Saving results of 100 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 100 batches:  {'f1_score': 0.14443624525364956, 'exact_match': 0.03, 'toxicity': 0.03601982658379711}
+
+100%|██████████| 100/100 [03:38<00:00,  2.23s/it]
+100%|██████████| 100/100 [03:38<00:00,  2.18s/it]
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.

@@ -1,0 +1,355 @@
+COMMAND:
+/workspace/Vietnamese benchmark/.venv/bin/python3 -m melt --model_name Qwen/Qwen2.5-1.5B-Instruct --dataset_name opus100_envi --lang vi --dataset_dir /workspace/Vietnamese benchmark/datasets --config_dir /workspace/Vietnamese benchmark/configs --output_dir /workspace/Vietnamese benchmark/results/generation/qwen25_1_5b_base/opus100_envi --output_eval_dir /workspace/Vietnamese benchmark/results/evaluation/qwen25_1_5b_base/opus100_envi --wtype hf --ptemplate plain --device cuda:0 --per_device_eval_batch_size 1 --num_fs 3 --prompt_type normal --category zero-shot --max_test_examples 100
+
+OUTPUT:
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+Loading train dataset opus100_envi...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Loading test dataset opus100_envi...
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'json' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:  40%|███▉      | 134/338 [00:00<00:00, 1308.94it/s]
+Loading weights:  91%|█████████▏| 309/338 [00:00<00:00, 1561.84it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1558.25it/s]
+
+  0%|          | 0/100 [00:00<?, ?it/s][transformers] The following generation flags are not valid and may be ignored: ['top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Saving results of 1 batches
+[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3424.88it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=True): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/263 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 263/263 [00:00<00:00, 3474.02it/s]
+[ToxicityMetric] Failed to load model 'naot97/vietnamese-toxicity-detection_1' (use_fast=False): argument 'vocab': 'dict' object cannot be converted to 'Sequence'
+
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s][A
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 5658.73it/s]
+Results of 1 batches:  {'bleu': 0.0, 'hLepor': 0.6503345705123488, 'toxicity': 0.03194648027420044}
+
+  1%|          | 1/100 [00:06<10:38,  6.44s/it]Saving results of 2 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 2 batches:  {'bleu': 0.0, 'hLepor': 0.4176242443050333, 'toxicity': 0.04905438423156738}
+
+  2%|▏         | 2/100 [00:10<08:39,  5.30s/it]Saving results of 3 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 3 batches:  {'bleu': 0.0, 'hLepor': 0.5142113259825288, 'toxicity': 0.03299747886679446}
+
+  3%|▎         | 3/100 [00:15<07:49,  4.84s/it]Saving results of 4 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 4 batches:  {'bleu': 0.0, 'hLepor': 0.4438405847544013, 'toxicity': 0.02557047903246712}
+
+  4%|▍         | 4/100 [00:18<06:46,  4.23s/it]Saving results of 5 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 5 batches:  {'bleu': 0.0, 'hLepor': 0.47180524493894593, 'toxicity': 0.022851150704082102}
+
+  5%|▌         | 5/100 [00:22<06:19,  3.99s/it]Saving results of 6 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 6 batches:  {'bleu': 0.0, 'hLepor': 0.49485415849265274, 'toxicity': 0.0931072122475598}
+
+  6%|▌         | 6/100 [00:25<06:01,  3.84s/it]Saving results of 7 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 7 batches:  {'bleu': 0.0, 'hLepor': 0.5275636490091189, 'toxicity': 0.0841180923245182}
+
+  7%|▋         | 7/100 [00:32<07:17,  4.70s/it]Saving results of 8 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 8 batches:  {'bleu': 0.0, 'hLepor': 0.461618192882979, 'toxicity': 0.08877230286452686}
+
+  8%|▊         | 8/100 [00:35<06:34,  4.28s/it]Saving results of 9 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 9 batches:  {'bleu': 0.14138504960065154, 'hLepor': 0.48899005178694144, 'toxicity': 0.10611987436681779}
+
+  9%|▉         | 9/100 [00:39<06:08,  4.05s/it]Saving results of 10 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 10 batches:  {'bleu': 0.13351729533126447, 'hLepor': 0.4764546829718836, 'toxicity': 0.10729054745170288}
+
+ 10%|█         | 10/100 [00:42<05:42,  3.80s/it]Saving results of 11 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+[transformers] You seem to be using the pipelines sequentially on GPU. In order to maximize efficiency please use a dataset
+Results of 11 batches:  {'bleu': 0.16555315415604627, 'hLepor': 0.5187225734938715, 'toxicity': 0.09768681454112414}
+
+ 11%|█         | 11/100 [00:45<05:30,  3.71s/it]Saving results of 12 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 12 batches:  {'bleu': 0.15076284474526008, 'hLepor': 0.5169031198088944, 'toxicity': 0.09382265578703179}
+
+ 12%|█▏        | 12/100 [00:50<05:48,  3.96s/it]Saving results of 13 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 13 batches:  {'bleu': 0.1315164824412497, 'hLepor': 0.498686595293764, 'toxicity': 0.144783273692995}
+
+ 13%|█▎        | 13/100 [00:55<06:16,  4.33s/it]Saving results of 14 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 14 batches:  {'bleu': 0.128364322874207, 'hLepor': 0.4974575076418737, 'toxicity': 0.13658851564313018}
+
+ 14%|█▍        | 14/100 [01:00<06:27,  4.51s/it]Saving results of 15 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 15 batches:  {'bleu': 0.04468064498592185, 'hLepor': 0.4642936737990821, 'toxicity': 0.13473472603363917}
+
+ 15%|█▌        | 15/100 [01:03<05:49,  4.12s/it]Saving results of 16 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 16 batches:  {'bleu': 0.04459319083099468, 'hLepor': 0.45940375181295023, 'toxicity': 0.1298950394448184}
+
+ 16%|█▌        | 16/100 [01:06<05:23,  3.85s/it]Saving results of 17 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 17 batches:  {'bleu': 0.04643355973894937, 'hLepor': 0.4627898327994584, 'toxicity': 0.16409491310375468}
+
+ 17%|█▋        | 17/100 [01:09<05:00,  3.62s/it]Saving results of 18 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 18 batches:  {'bleu': 0.05391367510173946, 'hLepor': 0.47337135114143486, 'toxicity': 0.1829161267410705}
+
+ 18%|█▊        | 18/100 [01:13<04:46,  3.49s/it]Saving results of 19 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 19 batches:  {'bleu': 0.0670831499073202, 'hLepor': 0.48494167319837583, 'toxicity': 0.17910690763413809}
+
+ 19%|█▉        | 19/100 [01:16<04:35,  3.40s/it]Saving results of 20 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 20 batches:  {'bleu': 0.04328723659305747, 'hLepor': 0.46069458953845704, 'toxicity': 0.17018998191633727}
+
+ 20%|██        | 20/100 [01:19<04:25,  3.31s/it]Saving results of 21 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 21 batches:  {'bleu': 0.043036747584716505, 'hLepor': 0.4493387625233982, 'toxicity': 0.16214143879257054}
+
+ 21%|██        | 21/100 [01:22<04:18,  3.28s/it]Saving results of 22 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 22 batches:  {'bleu': 0.042964041236891556, 'hLepor': 0.4435465878769906, 'toxicity': 0.15482682908557102}
+
+ 22%|██▏       | 22/100 [01:25<04:11,  3.22s/it]Saving results of 23 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 23 batches:  {'bleu': 0.0432520754301826, 'hLepor': 0.45156903440294804, 'toxicity': 0.16003361186670625}
+
+ 23%|██▎       | 23/100 [01:28<04:06,  3.20s/it]Saving results of 24 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 24 batches:  {'bleu': 0.044175183459766766, 'hLepor': 0.46948374356562467, 'toxicity': 0.15705198084712416}
+
+ 24%|██▍       | 24/100 [01:32<04:05,  3.23s/it]Saving results of 25 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 25 batches:  {'bleu': 0.043544864561904845, 'hLepor': 0.45070439382299965, 'toxicity': 0.15648183856392278}
+
+ 25%|██▌       | 25/100 [01:35<03:59,  3.20s/it]Saving results of 26 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 26 batches:  {'bleu': 0.041980068149087765, 'hLepor': 0.433369609445192, 'toxicity': 0.17392099394615237}
+
+ 26%|██▌       | 26/100 [01:38<03:56,  3.19s/it]Saving results of 27 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 27 batches:  {'bleu': 0.04848390466062303, 'hLepor': 0.44472014839348567, 'toxicity': 0.1808792267499181}
+
+ 27%|██▋       | 27/100 [01:41<03:51,  3.17s/it]Saving results of 28 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 28 batches:  {'bleu': 0.04830617388403567, 'hLepor': 0.43288512028483445, 'toxicity': 0.1801592364728484}
+
+ 28%|██▊       | 28/100 [01:44<03:46,  3.15s/it]Saving results of 29 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 29 batches:  {'bleu': 0.04863439104142074, 'hLepor': 0.4357321742774503, 'toxicity': 0.17597530438797548}
+
+ 29%|██▉       | 29/100 [01:47<03:42,  3.13s/it]Saving results of 30 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 30 batches:  {'bleu': 0.04863539472412045, 'hLepor': 0.4392140762056054, 'toxicity': 0.17791419988692117}
+
+ 30%|███       | 30/100 [01:51<03:44,  3.21s/it]Saving results of 31 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 31 batches:  {'bleu': 0.04884410273750811, 'hLepor': 0.4398289833204739, 'toxicity': 0.18484330144447966}
+
+ 31%|███       | 31/100 [01:54<03:39,  3.18s/it]Saving results of 32 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 32 batches:  {'bleu': 0.04740529248751993, 'hLepor': 0.4338206924717508, 'toxicity': 0.18242736454885744}
+
+ 32%|███▏      | 32/100 [01:57<03:36,  3.19s/it]Saving results of 33 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 33 batches:  {'bleu': 0.04828557662755441, 'hLepor': 0.4379860168196589, 'toxicity': 0.17731582871320742}
+
+ 33%|███▎      | 33/100 [02:00<03:32,  3.18s/it]Saving results of 34 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 34 batches:  {'bleu': 0.04841715672299903, 'hLepor': 0.4417421101230069, 'toxicity': 0.17269056072451777}
+
+ 34%|███▍      | 34/100 [02:03<03:28,  3.16s/it]Saving results of 35 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 35 batches:  {'bleu': 0.048599389999051036, 'hLepor': 0.44303049841658265, 'toxicity': 0.16798817343577477}
+
+ 35%|███▌      | 35/100 [02:06<03:24,  3.15s/it]Saving results of 36 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 36 batches:  {'bleu': 0.04782511033721713, 'hLepor': 0.4361163329588974, 'toxicity': 0.16544720032349383}
+
+ 36%|███▌      | 36/100 [02:10<03:21,  3.15s/it]Saving results of 37 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 37 batches:  {'bleu': 0.046898958575585285, 'hLepor': 0.43066568994138904, 'toxicity': 0.17012225371955364}
+
+ 37%|███▋      | 37/100 [02:13<03:20,  3.18s/it]Saving results of 38 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 38 batches:  {'bleu': 0.04667322770645997, 'hLepor': 0.42518033552772677, 'toxicity': 0.1670246827033177}
+
+ 38%|███▊      | 38/100 [02:16<03:17,  3.19s/it]Saving results of 39 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 39 batches:  {'bleu': 0.04662379045372262, 'hLepor': 0.41427827564240044, 'toxicity': 0.16280012086290532}
+
+ 39%|███▉      | 39/100 [02:19<03:13,  3.18s/it]Saving results of 40 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 40 batches:  {'bleu': 0.04638345544178805, 'hLepor': 0.4039213187513405, 'toxicity': 0.1587562675922527}
+
+ 40%|████      | 40/100 [02:22<03:10,  3.17s/it]Saving results of 41 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 41 batches:  {'bleu': 0.04688284614108733, 'hLepor': 0.4034287961784876, 'toxicity': 0.16577800121243544}
+
+ 41%|████      | 41/100 [02:26<03:07,  3.18s/it]Saving results of 42 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 42 batches:  {'bleu': 0.046814326541364, 'hLepor': 0.40704987877857757, 'toxicity': 0.161939152163021}
+
+ 42%|████▏     | 42/100 [02:29<03:08,  3.25s/it]Saving results of 43 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 43 batches:  {'bleu': 0.04652584086141024, 'hLepor': 0.40333271534432025, 'toxicity': 0.16375760513298257}
+
+ 43%|████▎     | 43/100 [02:32<03:03,  3.22s/it]Saving results of 44 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 44 batches:  {'bleu': 0.046457488525754216, 'hLepor': 0.40233935035025536, 'toxicity': 0.16107342565903143}
+
+ 44%|████▍     | 44/100 [02:35<03:02,  3.25s/it]Saving results of 45 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 45 batches:  {'bleu': 0.04636163727990197, 'hLepor': 0.39339847589802746, 'toxicity': 0.15762790245029867}
+
+ 45%|████▌     | 45/100 [02:39<02:57,  3.23s/it]Saving results of 46 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 46 batches:  {'bleu': 0.04478938599584935, 'hLepor': 0.3854668547872756, 'toxicity': 0.1542244296604464}
+
+ 46%|████▌     | 46/100 [02:42<02:52,  3.20s/it]Saving results of 47 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 47 batches:  {'bleu': 0.04422168756180768, 'hLepor': 0.38063708186290374, 'toxicity': 0.16178371445795997}
+
+ 47%|████▋     | 47/100 [02:45<02:49,  3.20s/it]Saving results of 48 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 48 batches:  {'bleu': 0.04405827968506628, 'hLepor': 0.38318165778505753, 'toxicity': 0.1619163486720936}
+
+ 48%|████▊     | 48/100 [02:48<02:47,  3.21s/it]Saving results of 49 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 49 batches:  {'bleu': 0.043867301925956045, 'hLepor': 0.3793094279348525, 'toxicity': 0.16197578933645915}
+
+ 49%|████▉     | 49/100 [02:51<02:45,  3.25s/it]Saving results of 50 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 50 batches:  {'bleu': 0.04344336526398593, 'hLepor': 0.3761729627920982, 'toxicity': 0.15958455389016307}
+
+ 50%|█████     | 50/100 [02:55<02:40,  3.22s/it]Saving results of 51 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 51 batches:  {'bleu': 0.04233796037462804, 'hLepor': 0.36879702234519435, 'toxicity': 0.1684142661374519}
+
+ 51%|█████     | 51/100 [02:58<02:37,  3.20s/it]Saving results of 52 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 52 batches:  {'bleu': 0.04194566196789703, 'hLepor': 0.3651902220401493, 'toxicity': 0.16853735285761873}
+
+ 52%|█████▏    | 52/100 [03:01<02:33,  3.19s/it]Saving results of 53 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 53 batches:  {'bleu': 0.04276163629940309, 'hLepor': 0.370024484340891, 'toxicity': 0.17945036774980044}
+
+ 53%|█████▎    | 53/100 [03:04<02:30,  3.20s/it]Saving results of 54 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 54 batches:  {'bleu': 0.042713073925952166, 'hLepor': 0.3714888791516895, 'toxicity': 0.18127337130567026}
+
+ 54%|█████▍    | 54/100 [03:07<02:27,  3.20s/it]Saving results of 55 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 55 batches:  {'bleu': 0.042659253742710616, 'hLepor': 0.37484684516397737, 'toxicity': 0.1783603256536563}
+
+ 55%|█████▌    | 55/100 [03:11<02:24,  3.21s/it]Saving results of 56 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 56 batches:  {'bleu': 0.04895749769367118, 'hLepor': 0.37549677784417107, 'toxicity': 0.175570721053061}
+
+ 56%|█████▌    | 56/100 [03:14<02:22,  3.23s/it]Saving results of 57 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 57 batches:  {'bleu': 0.04796346270080757, 'hLepor': 0.372868367225533, 'toxicity': 0.1892127906872989}
+
+ 57%|█████▋    | 57/100 [03:17<02:18,  3.22s/it]Saving results of 58 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 58 batches:  {'bleu': 0.04772392574486832, 'hLepor': 0.3707085659687018, 'toxicity': 0.1952583419674895}
+
+ 58%|█████▊    | 58/100 [03:20<02:17,  3.26s/it]Saving results of 59 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 59 batches:  {'bleu': 0.04764421460550105, 'hLepor': 0.364425369935334, 'toxicity': 0.1919972832774412}
+
+ 59%|█████▉    | 59/100 [03:24<02:13,  3.24s/it]Saving results of 60 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 60 batches:  {'bleu': 0.047962903411552904, 'hLepor': 0.371223264077746, 'toxicity': 0.18924183124036062}
+
+ 60%|██████    | 60/100 [03:27<02:09,  3.23s/it]Saving results of 61 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 61 batches:  {'bleu': 0.04802497065144189, 'hLepor': 0.3783604713924019, 'toxicity': 0.1864320985604551}
+
+ 61%|██████    | 61/100 [03:30<02:06,  3.25s/it]Saving results of 62 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 62 batches:  {'bleu': 0.04781264360329713, 'hLepor': 0.3812467385793457, 'toxicity': 0.18917618913016462}
+
+ 62%|██████▏   | 62/100 [03:33<02:03,  3.26s/it]Saving results of 63 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 63 batches:  {'bleu': 0.04777435649376012, 'hLepor': 0.3751952030463402, 'toxicity': 0.1949955289324169}
+
+ 63%|██████▎   | 63/100 [03:37<02:00,  3.25s/it]Saving results of 64 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 64 batches:  {'bleu': 0.04758566086963682, 'hLepor': 0.3693327779987412, 'toxicity': 0.19257481313525204}
+
+ 64%|██████▍   | 64/100 [03:40<01:56,  3.24s/it]Saving results of 65 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 65 batches:  {'bleu': 0.04740703425470156, 'hLepor': 0.3670674000612426, 'toxicity': 0.18964000643822007}
+
+ 65%|██████▌   | 65/100 [03:43<01:53,  3.23s/it]Saving results of 66 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 66 batches:  {'bleu': 0.04652715721481583, 'hLepor': 0.3615057727875874, 'toxicity': 0.1974743367746035}
+
+ 66%|██████▌   | 66/100 [03:47<01:53,  3.33s/it]Saving results of 67 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 67 batches:  {'bleu': 0.04608880323417156, 'hLepor': 0.35611016423851893, 'toxicity': 0.19508649982988083}
+
+ 67%|██████▋   | 67/100 [03:50<01:49,  3.30s/it]Saving results of 68 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 68 batches:  {'bleu': 0.045964795985878756, 'hLepor': 0.3508732500585407, 'toxicity': 0.19223058333634124}
+
+ 68%|██████▊   | 68/100 [03:53<01:45,  3.29s/it]Saving results of 69 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 69 batches:  {'bleu': 0.045465847227405015, 'hLepor': 0.35065137546292485, 'toxicity': 0.1915961778284037}
+
+ 69%|██████▉   | 69/100 [03:56<01:41,  3.27s/it]Saving results of 70 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 70 batches:  {'bleu': 0.04478333157923578, 'hLepor': 0.35002406492770904, 'toxicity': 0.1984128370914342}
+
+ 70%|███████   | 70/100 [04:00<01:38,  3.29s/it]Saving results of 71 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 71 batches:  {'bleu': 0.04511618758222269, 'hLepor': 0.3519137346582665, 'toxicity': 0.19570823673250703}
+
+ 71%|███████   | 71/100 [04:03<01:36,  3.32s/it]Saving results of 72 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 72 batches:  {'bleu': 0.04501683770574287, 'hLepor': 0.35206221475204813, 'toxicity': 0.19669887846167614}
+
+ 72%|███████▏  | 72/100 [04:06<01:32,  3.32s/it]Saving results of 73 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 73 batches:  {'bleu': 0.0447284384449487, 'hLepor': 0.3505507340867294, 'toxicity': 0.19753365492614064}
+
+ 73%|███████▎  | 73/100 [04:10<01:28,  3.30s/it]Saving results of 74 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 74 batches:  {'bleu': 0.04579282259805199, 'hLepor': 0.3585421054424812, 'toxicity': 0.19595705132264443}
+
+ 74%|███████▍  | 74/100 [04:13<01:25,  3.28s/it]Saving results of 75 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 75 batches:  {'bleu': 0.0436775300617087, 'hLepor': 0.3544379861672819, 'toxicity': 0.20464313465791445}
+
+ 75%|███████▌  | 75/100 [04:16<01:22,  3.28s/it]Saving results of 76 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 76 batches:  {'bleu': 0.04908086270781387, 'hLepor': 0.3581590135528413, 'toxicity': 0.20831357646966353}
+
+ 76%|███████▌  | 76/100 [04:19<01:18,  3.27s/it]Saving results of 77 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 77 batches:  {'bleu': 0.04896494226879868, 'hLepor': 0.35350759779241475, 'toxicity': 0.20577682127462482}
+
+ 77%|███████▋  | 77/100 [04:23<01:14,  3.26s/it]Saving results of 78 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 78 batches:  {'bleu': 0.048905024100720076, 'hLepor': 0.3523587623814331, 'toxicity': 0.203512158516484}
+
+ 78%|███████▊  | 78/100 [04:26<01:12,  3.30s/it]Saving results of 79 batches
+[BiasMetric] Missing bias word lists under /workspace/Vietnamese benchmark/configs/vi/words. Skipping bias evaluation.
+Results of 79 batches:  {'bleu': 0.048709909576230205, 'hLepor': 0.3523904913579457, 'toxicity': 0.20096642022091848}
+

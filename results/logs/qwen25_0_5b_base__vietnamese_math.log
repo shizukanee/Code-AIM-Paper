@@ -1,0 +1,4 @@
+COMMAND:
+D:\Hung-Dung\Expriments\catastrophic_research\Vietnamese benchmark\.venv\Scripts\python.exe -m melt --model_name Qwen/Qwen2.5-0.5B --dataset_name vietnamese_math --lang vi --dataset_dir D:\Hung-Dung\Expriments\catastrophic_research\Vietnamese benchmark\datasets --config_dir D:\Hung-Dung\Expriments\catastrophic_research\Vietnamese benchmark\configs --output_dir D:\Hung-Dung\Expriments\catastrophic_research\Vietnamese benchmark\results\generation --output_eval_dir D:\Hung-Dung\Expriments\catastrophic_research\Vietnamese benchmark\results\evaluation --wtype hf --ptemplate llama-3 --device cpu --per_device_eval_batch_size 16 --num_fs 3 --prompt_type normal --category zero-shot --smoke_test
+
+OUTPUT:
