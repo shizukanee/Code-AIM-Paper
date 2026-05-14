@@ -1,0 +1,12 @@
+.venv/
+.uv-cache/
+__pycache__/
+*.pyc
+melt-upstream/
+data/
+datasets/
+models/
+outputs/
+results/
+results_wtf/
+manual_downloads/

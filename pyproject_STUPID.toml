@@ -1,0 +1,40 @@
+[project]
+name = "vietnamese-benchmark"
+version = "0.1.0"
+description = "Vietnamese benchmark workspace for instruct and LoRA evaluation"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.4.0",
+  "transformers>=4.53.0",
+  "accelerate>=1.1.0",
+  "datasets>=3.6.0",
+  "huggingface_hub>=0.30.0",
+  "evaluate>=0.4.0",
+  "peft>=0.14.0",
+  "protobuf>=5.0.0",
+  "sentencepiece>=0.2.0",
+  "python-dotenv>=1.0.1",
+  "tqdm>=4.67.0",
+  "pandas>=2.2.0",
+  "pyarrow>=17.0.0",
+  "scikit-learn>=1.5.0",
+  "python-Levenshtein>=0.27.0",
+  "jiwer>=3.0.5",
+  "uncertainty-calibration>=0.1.4",
+  "ranx>=0.3.20",
+  "bert-score==0.3.13",
+  "rouge-score==0.1.2",
+  "hlepor==0.0.4",
+  "nptyping>=2.5.0",
+  "gin-config>=0.5.0",
+  "underthesea>=6.8.4",
+  "spacy>=3.8.0",
+  "stanza>=1.9.2",
+  "jinja2>=3.1.4",
+]
+
+[dependency-groups]
+gpu = [
+  "bitsandbytes>=0.45.0",
+]
