@@ -35,6 +35,11 @@ Covered benchmark ids:
 - `vietnamese_math`
 - `opus100_envi`
 - `phomt_envi`
+- `xnli_vi`
+- `vinli`
+- `phoner`
+- `vlsp2016_ner`
+
 
 ## Setup
 
